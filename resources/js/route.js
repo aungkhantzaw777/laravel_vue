@@ -1,5 +1,6 @@
 import foo from './components/foo.vue';
 import bar from './components/bar.vue';
+import task from './components/task.vue';
 
 export const routes = [
     { 
@@ -11,5 +12,10 @@ export const routes = [
     	path: '/bar', 
 	    component: bar, 
 	    name: 'bar' 
+	},
+	{
+		path:'/task',
+		component: task,
+		name:task
 	}
 ];

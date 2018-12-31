@@ -18,11 +18,15 @@
             
             <router-link to="/foo">Go to Foo</router-link>
             <router-link to="/bar">Go to Bar</router-link>
+            <br>
+            <router-link to="/task">task</router-link>
             
             <router-view></router-view>
+            <!-- <button id="show">click</button> -->
 
             <!-- <a href="{{ url('/task') }}">task</a> -->
         </div>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>
+    
 </html>

@@ -7,6 +7,7 @@ import task from './components/task.vue'
 import VueRouter from 'vue-router'
 import foo from './components/foo.vue'
 import bar from './components/bar.vue'
+import jquery from 'jquery'
 
 import { routes } from './route';
 

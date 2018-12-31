@@ -1803,6 +1803,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'bar'
 });
@@ -1857,6 +1868,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'foo'
 });
@@ -1885,6 +1906,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'task',
   data: function data() {
@@ -1898,6 +1920,11 @@ __webpack_require__.r(__webpack_exports__);
         description: ''
       }
     };
+  },
+  methods: {
+    add: function add() {
+      alert('hello world');
+    }
   }
 });
 
@@ -36797,9 +36824,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n\ti am bar\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card card-default" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v("bar container")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v("\n                        i am bar\n                    ")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -36858,9 +36906,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n\ti am foo\n")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card card-default" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v("foo container")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v("\n                        i am foo\n                    ")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -36882,19 +36951,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("testing")]),
+  return _c("div", { staticClass: "container" }, [
+    _c("h1", [_vm._v("to do task")]),
     _vm._v(" "),
     _c(
       "ul",
       _vm._l(_vm.tasks, function(task) {
         return _c("li", [
           _vm._v("\n\t\t\t" + _vm._s(task.name) + "\n\t\t\t"),
-          _c("span", [_vm._v("×")])
+          _c("span", { staticClass: "pull-right" }, [_vm._v("×")])
         ])
       }),
       0
-    )
+    ),
+    _vm._v(" "),
+    _c("input", { attrs: { type: "text" } }),
+    _c("button", { on: { click: _vm.add } }, [_vm._v("add")])
   ])
 }
 var staticRenderFns = []
@@ -50816,8 +50888,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_foo_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/foo.vue */ "./resources/js/components/foo.vue");
 /* harmony import */ var _components_bar_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/bar.vue */ "./resources/js/components/bar.vue");
-/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./route */ "./resources/js/route.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _route__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./route */ "./resources/js/route.js");
 // window.Vue = require('vue');
+
 
 
 
@@ -50830,7 +50905,7 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_3___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
   mode: 'history',
-  routes: _route__WEBPACK_IMPORTED_MODULE_8__["routes"]
+  routes: _route__WEBPACK_IMPORTED_MODULE_9__["routes"]
 });
 var app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({
   el: '#app',
@@ -51244,6 +51319,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _components_foo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/foo.vue */ "./resources/js/components/foo.vue");
 /* harmony import */ var _components_bar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/bar.vue */ "./resources/js/components/bar.vue");
+/* harmony import */ var _components_task_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/task.vue */ "./resources/js/components/task.vue");
+
 
 
 var routes = [{
@@ -51254,6 +51331,10 @@ var routes = [{
   path: '/bar',
   component: _components_bar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: 'bar'
+}, {
+  path: '/task',
+  component: _components_task_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+  name: _components_task_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 
 /***/ }),
