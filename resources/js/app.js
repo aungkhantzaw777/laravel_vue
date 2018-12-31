@@ -25,7 +25,9 @@ const app = new Vue({
     components:{
     	example,
     	blog,
-    	task
+    	task,
+    	foo,
+    	bar
     },
     router
 });

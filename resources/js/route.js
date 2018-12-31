@@ -1,5 +1,6 @@
 import foo from './components/foo.vue';
 import bar from './components/bar.vue';
+
 export const routes = [
     { 
     	path: '/foo', 

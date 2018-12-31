@@ -13,15 +13,15 @@
     </head>
     <body>
         <div id="app">
-            <example></example> 
-            <blog></blog>
+            <!-- <example></example> 
+            <blog></blog> -->
             
             <router-link to="/foo">Go to Foo</router-link>
             <router-link to="/bar">Go to Bar</router-link>
             
-            <route-view></route-view>
+            <router-view></router-view>
 
-            <a href="{{ url('/task') }}">task</a>
+            <!-- <a href="{{ url('/task') }}">task</a> -->
         </div>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>

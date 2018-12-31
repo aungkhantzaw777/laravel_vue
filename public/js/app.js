@@ -50837,7 +50837,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({
   components: {
     example: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     blog: _components_blog_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    task: _components_task_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    task: _components_task_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    foo: _components_foo_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    bar: _components_bar_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   },
   router: router
 });
