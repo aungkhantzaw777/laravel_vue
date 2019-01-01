@@ -1910,6 +1910,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'task',
@@ -1945,6 +1947,20 @@ __webpack_require__.r(__webpack_exports__);
       this.Newtask = {
         name: ''
       };
+    },
+    del: function del(id) {
+      // let _id = id
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete('/api/' + id);
+      this.getItem();
+    },
+    getItem: function getItem() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/create').then(function (response) {
+        _this.tasks = response.data;
+      });
     }
   }
 });
@@ -6222,7 +6238,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.hide[data-v-f15a0460]{\n\tdisplay:none;\n}\n", ""]);
+exports.push([module.i, "\n.hide[data-v-f15a0460]{\n\tdisplay:none;\n}\n.card[data-v-f15a0460]{\n\tpadding: 10px;\n}\nul span[data-v-f15a0460]{\n\tdisplay: none;\n}\nli:hover span[data-v-f15a0460]{\n\tdisplay: block;\n\tcursor:pointer;\n}\n", ""]);
 
 // exports
 
@@ -37620,16 +37636,30 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("h1", [_vm._v("to do task")]),
     _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.tasks, function(task) {
-        return _c("li", [
-          _vm._v("\n\t\t\t" + _vm._s(task.name) + "\n\t\t\t"),
-          _c("span", { staticClass: "pull-right" }, [_vm._v("×")])
-        ])
-      }),
-      0
-    ),
+    _c("div", { staticClass: "card" }, [
+      _c(
+        "ul",
+        { staticClass: "list-group list-group-flush" },
+        _vm._l(_vm.tasks, function(task) {
+          return _c("li", { staticClass: "list-group-item" }, [
+            _vm._v("\n\t\t\t\t" + _vm._s(task.name) + "\n\t\t\t\t"),
+            _c(
+              "span",
+              {
+                staticClass: "float-right",
+                on: {
+                  click: function($event) {
+                    _vm.del(task.id)
+                  }
+                }
+              },
+              [_vm._v("×")]
+            )
+          ])
+        }),
+        0
+      )
+    ]),
     _vm._v(" "),
     _c("input", {
       directives: [

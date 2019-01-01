@@ -50,6 +50,8 @@ class ApiController extends Controller
     
     public function destroy($id)
     {
-        //
+        $task = task::find($id);
+        $task->delete();
+        return response(task::all()->jsonSerialize(), Response::HTTP_OK);
     }
 }
