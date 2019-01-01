@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\task;
+use Faker\Generator;
 
 class ApiController extends Controller
 {
@@ -15,13 +18,15 @@ class ApiController extends Controller
     
     public function create()
     {
-        //
+        return response(task::all()->jsonSerialize(), Response::HTTP_OK);
     }
 
     
     public function store(Request $request)
     {
-        //
+        $task = new task($request->all());
+        $task->save($task->getAttributes());
+        return response(task::all()->jsonSerialize(), Response::HTTP_OK);
     }
 
     

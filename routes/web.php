@@ -8,6 +8,11 @@ Route::get('/', function () {
 
 
 Route::get('/task','ApiController@index');
+
+
+Route::resource('/api','ApiController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
