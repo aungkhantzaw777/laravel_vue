@@ -1938,6 +1938,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this; // console.log(task)
 
 
+      if (task == "") {
+        alert('please fill task name!');
+        return false;
+      }
+
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api', {
         name: task
       }).then(function (response) {
@@ -52090,8 +52095,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/vue_laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/vue_laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\laravel_vue\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel_vue\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

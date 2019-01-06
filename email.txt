@@ -1,0 +1,2 @@
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191);

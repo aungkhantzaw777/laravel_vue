@@ -10,9 +10,9 @@
 			</ul>
 		</div>
 		<input type="text" v-model="Newtask.name"><button @click="add">add</button>
-		
+
 	</div>
-	
+
 </template>
 
 <script>
@@ -42,6 +42,11 @@
 				let task = this.Newtask.name
 				let _this = this
 				// console.log(task)
+				if (task == "") {
+					alert('please fill task name!')
+					return false
+				}
+
 				axios.post('/api',{
 					name:task
 				})
