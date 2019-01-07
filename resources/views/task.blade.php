@@ -8,7 +8,9 @@
 </head>
 <body>
 	<div id="app">
-		<task>
+		<header></header>
+		
+		<task></task>
 	</div>
 </body>
 <script src="{{ asset('js/app.js') }}"></script>

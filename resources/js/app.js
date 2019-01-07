@@ -7,7 +7,9 @@ import task from './components/task.vue'
 import VueRouter from 'vue-router'
 import foo from './components/foo.vue'
 import bar from './components/bar.vue'
+import header from './components/header.vue'
 import jquery from 'jquery'
+
 
 import { routes } from './route';
 
@@ -24,11 +26,13 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     components:{
+      header,
     	example,
     	blog,
     	task,
     	foo,
     	bar
+
     },
     router
 });
