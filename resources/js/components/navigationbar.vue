@@ -10,10 +10,10 @@
       <li class="nav-item active">
         <router-link class="nav-link" to='/blog'>blog</router-link>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <router-link class="nav-link" to='/foo'>foo</router-link>
       </li>
-      
+
     </ul>
   </div>
 </nav>

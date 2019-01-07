@@ -37706,7 +37706,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "li",
-              { staticClass: "nav-item" },
+              { staticClass: "nav-item active" },
               [
                 _c(
                   "router-link",

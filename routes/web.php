@@ -12,6 +12,10 @@ Route::get('/task','ApiController@index');
 
 Route::resource('/api','ApiController');
 
+Route::get('{any}', function () {
+    return view('task');
+})->where('any','.*');
+
 
 Auth::routes();
 
