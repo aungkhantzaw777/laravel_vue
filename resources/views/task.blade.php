@@ -8,9 +8,10 @@
 </head>
 <body>
 	<div id="app">
-		<header></header>
-		
-		<task></task>
+		<navigationbar></navigationbar>
+
+		<!-- <task></task> -->
+		<router-view></router-view>
 	</div>
 </body>
 <script src="{{ asset('js/app.js') }}"></script>

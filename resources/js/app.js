@@ -7,7 +7,7 @@ import task from './components/task.vue'
 import VueRouter from 'vue-router'
 import foo from './components/foo.vue'
 import bar from './components/bar.vue'
-import header from './components/header.vue'
+import navigationbar from './components/navigationbar.vue'
 import jquery from 'jquery'
 
 
@@ -26,12 +26,10 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     components:{
-      header,
+      navigationbar,
     	example,
     	blog,
-    	task,
-    	foo,
-    	bar
+    	task
 
     },
     router
